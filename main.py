@@ -30,3 +30,83 @@ def find_average(nums):  # по условию nums - список цифр
         return total  # возвращаем результат
 
 
+# Kata 08 02
+"""
+Your task is simply to count the total number of lowercase letters in a string.
+
+Examples
+lowercaseCount("abc"); ===> 3
+
+lowercaseCount("abcABC123"); ===> 3
+
+lowercaseCount("abcABC123!@€£#$%^&*()_-+=}{[]|\':;?/>.<,~"); ===> 3
+
+lowercaseCount(""); ===> 0;
+
+lowercaseCount("ABC123!@€£#$%^&*()_-+=}{[]|\':;?/>.<,~"); ===> 0
+
+lowercaseCount("abcdefghijklmnopqrstuvwxyz"); ===> 26
+"""
+
+
+def lowercase_count(strng):  # подается строка с данными
+    summa = 0  # дополнительная переменная для счетчика
+    for letter in strng:  # перебираем данные
+        if letter.islower():  # islower() - возвращается истину, если символ в строке в нижнем регистре
+            summa = summa + 1  # счетчик
+    return summa
+
+
+# Kata 08 #03
+
+"""You need to write a function that reverses the words in a given string. A word can also fit an empty string. If this is not clear enough, here are some examples:
+
+As the input may have trailing spaces, you will also need to ignore unneccesary whitespace.
+
+Example (Input --> Output)
+
+"Hello World" --> "World Hello"
+"Hi There." --> "There. Hi"
+Happy coding!"""
+
+
+def reverse(st):
+    list_new = st.split()
+    list_new.reverse()
+    string = " ".join(list_new)
+    return string
+
+
+# Kata 08 #04
+
+"""Overview
+Hello, this is my first Kata so forgive me if it is of poor quality.
+
+In this Kata you should fix/create a program that returns the following values:
+
+false/False if either a or b (or both) are not numbers
+a % b plus b % a if both arguments are numbers
+You may assume the following:
+
+If a and b are both numbers, neither of a or b will be 0.
+Language-Specific Instructions
+Javascript and PHP
+In this Kata you should try to fix all the syntax errors found in the code.
+
+Once you think all the bugs are fixed run the code to see if it works. A correct solution should return the values 
+specified in the overview.
+
+Extension: Once you have fixed all the syntax errors present in the code (basic requirement), you may attempt to 
+optimise the code or try a different approach by coding it from scratch."""
+
+
+def my_first_kata(a, b):
+    a = str(a) # Перегоняем в строку, иначе костыль снизу не работает
+    b = str(b) # Перегоняем в строку, иначе костыль снизу не работает
+    if a.isdigit() and b.isdigit() or a == [] or b == []: # isdigit() - проверяет строку на наличие цифр внутри
+        a = int(a) # перегоняем обратно в число
+        b = int(b) # перегоняем обратно в число
+        return a % b + + b % a
+    else:
+        return False
+
