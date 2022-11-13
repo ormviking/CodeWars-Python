@@ -5,7 +5,9 @@ Find Mean
 Find the mean (average) of a list of numbers in an array.
 
 Information
-To find the mean (average) of a set of numbers add all of the numbers together and divide by the number of values in the list.
+To find the mean (average) of a set of numbers add
+all the numbers together and divide by the number of values in the
+list.
 
 For an example list of 1, 3, 5, 7
 
@@ -59,7 +61,8 @@ def lowercase_count(strng):  # подается строка с данными
 
 # Kata 08 #03
 
-"""You need to write a function that reverses the words in a given string. A word can also fit an empty string. If this is not clear enough, here are some examples:
+"""You need to write a function that reverses the words in a given string. A word can also fit an empty string. If this 
+is not clear enough, here are some examples:
 
 As the input may have trailing spaces, you will also need to ignore unneccesary whitespace.
 
@@ -101,12 +104,26 @@ optimise the code or try a different approach by coding it from scratch."""
 
 
 def my_first_kata(a, b):
-    a = str(a) # Перегоняем в строку, иначе костыль снизу не работает
-    b = str(b) # Перегоняем в строку, иначе костыль снизу не работает
-    if a.isdigit() and b.isdigit() or a == [] or b == []: # isdigit() - проверяет строку на наличие цифр внутри
-        a = int(a) # перегоняем обратно в число
-        b = int(b) # перегоняем обратно в число
+    a = str(a)  # Перегоняем в строку, иначе костыль снизу не работает
+    b = str(b)  # Перегоняем в строку, иначе костыль снизу не работает
+    if a.isdigit() and b.isdigit() or a == [] or b == []:  # isdigit() - проверяет строку на наличие цифр внутри
+        a = int(a)  # перегоняем обратно в число
+        b = int(b)  # перегоняем обратно в число
         return a % b + + b % a
     else:
         return False
 
+
+# Unfinished Loop - Bug Fixing #1
+"""
+    Oh no, Timmy's created an infinite loop! Help Timmy find and fix the bug in his unfinished for loop!
+"""
+
+
+def create_array(n):
+    res = []
+    i = 1
+    while i <= n:
+        res += [i]
+        i = i + 1
+    return res
