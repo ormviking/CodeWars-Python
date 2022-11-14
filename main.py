@@ -127,3 +127,69 @@ def create_array(n):
         res += [i]
         i = i + 1
     return res
+
+
+# Get the mean of an array
+
+"""
+It's the academic year's end, fateful moment of your school report. The averages must be calculated. All the students 
+come to you and entreat you to calculate their average for them. Easy ! You just need to write a script.
+
+Return the average of the given array rounded down to its nearest integer.
+
+The array will never be empty.
+"""
+
+
+def get_average(marks):
+    summa = 0
+    for i in marks:
+        summa = i + summa
+    return int(summa / len(marks))
+
+
+# Grasshopper - Messi Goals
+
+"""
+Messi's Goal Total
+Use variables to find the sum of the goals Messi scored in 3 competitions
+
+Information
+Messi goal scoring statistics:
+
+Competition	Goals
+La Liga	43
+Champions League	10
+Copa del Rey	5
+Task
+Create these three variables and store the appropriate values using the table above:
+la_liga_goals
+champions_league_goals
+copa_del_rey_goals
+Create a fourth variable named total_goals that stores the sum of all of Messi's goals for this year.
+"""
+
+la_liga_goals = 43
+champions_league_goals = 10
+copa_del_rey_goals = 5
+
+total_goals = la_liga_goals + champions_league_goals + copa_del_rey_goals
+
+# Opposites Attract
+
+"""
+Timmy & Sarah think they are in love, but around where they live, they will only know once they pick a flower each. 
+If one of the flowers has an even number of petals and the other has an odd number of petals it means they are in love.
+
+Write a function that will take the number of petals of each flower and return true if they are in love and false 
+if they aren't.
+"""
+
+
+def lovefunc(flower1, flower2):
+    if flower1 % 2 == 0 and flower2 % 2 == 0:
+        return False
+    elif flower1 % 2 > 0 and flower2 % 2 > 0:
+        return False
+    else:
+        return True
