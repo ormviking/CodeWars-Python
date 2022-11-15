@@ -221,3 +221,59 @@ def grader(score):
         return "B"
     elif 0.9 <= score:
         return "A"
+
+
+# Chuck Norris VII - True or False? (Beginner)
+"""
+It's a well known fact that anything Chuck Norris wants, he gets. As a result Chuck very rarely has to use the 
+word false.
+
+It is a less well known fact that if something is true, and Chuck doesn't want it to be, Chuck can scare the truth with 
+his massive biceps, and it automatically becomes false.
+
+Your task is to be more like Chuck (ha! good luck!). You must return false without ever actually using the word false...
+
+Go show some truth who's boss!
+
+"""
+
+
+def if_chuck_says_so():
+    return not True
+
+
+# Get number from string
+
+"""
+Write a function which removes from string all non-digit characters and parse the remaining to number. E.g: 
+"hell5o wor6ld" -> 56
+"""
+
+
+def get_number_from_string(string):
+    number = ''
+    for i in string:
+        try:
+            if i.isdigit():
+                number = number + str(i)
+        except ValueError:
+            continue
+    return int(number)
+
+
+# validate code with simple regex
+
+"""
+Basic regex tasks. Write a function that takes in a numeric code of any length. The function should check if 
+the code begins with 1, 2, or 3 and return true if so. Return false otherwise.
+
+You can assume the input will always be a number.
+"""
+
+
+def validate_code(code):
+    number = str(code)[0]
+    if number == "1" or number == "2" or number == "3":
+        return True
+    else:
+        return False
